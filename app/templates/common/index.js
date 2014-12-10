@@ -33,7 +33,7 @@ app.on('start', function () {
 /*
  * Create and start HTTP server.
  */
-if (!module.parent) {
+if (!module.parent || module.parent.isApplicationLoader) {
 
     /*
      * This is only done when this module is run directly, e.g. `node .` to allow for the
